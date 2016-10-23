@@ -8,19 +8,19 @@ def index():
 
 @app.route('/Comedies/')
 def Comedies():
-  return render_template('comedies.html')
+  return render_template('comedies.html', title='Comedies')
 
 @app.route('/Drama/')
 def Drama():
-  return render_template('drama.html')
+  return render_template('drama.html', title='Drama')
 
 @app.route('/Animation/')
 def Animation():
-  return render_template('animation.html')
+  return render_template('animation.html', title='Animation')
 
 @app.route('/Sci-fi/')
 def Scifi():
-  return render_template('scifi.html')
+  return render_template('scifi.html', title='Animation')
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)

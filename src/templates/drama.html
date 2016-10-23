@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Veronika's favorite films catalogue</title>
-
+    {% if title %}
+    <title>{{ title }} - Veronika's favorite films catalogue</title>
+    {% else %}
+    <title>Welcome</title>
+    {% endif %}
     <meta name="description" content="Movie catalogue">
     <meta name="author" content="Veronika Rosicova 40212551">
 
