@@ -22,8 +22,8 @@ def Animation():
 def Scifi():
   return render_template('scifi.html', title='Animation')
 
-@app . errorhandler (404)
-def page_not_found ( error ):
+@app.errorhandler (404)
+def page_not_found (error):
   return render_template('404.html', title='Error'), 404
 
 if __name__ == "__main__":
