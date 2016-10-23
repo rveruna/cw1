@@ -22,5 +22,8 @@ def Animation():
 def Scifi():
   return render_template('scifi.html', title='Animation')
 
+app.add_url_rule('/favicon.ico',
+                 redirect_to=url_for('static', filename='favicon.ico'))
+                 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
