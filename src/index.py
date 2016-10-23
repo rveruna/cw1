@@ -1,5 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, url_for, json, render_template
 app = Flask(__name__)
+
+# loading json
+def showjson():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
+    data = json.load(open(json_url))
+    return render_template('showjson.html', data=data)
 
 @app.route("/")
 def index():
