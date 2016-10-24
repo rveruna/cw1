@@ -24,12 +24,11 @@
 	<div class="row">
 		<div class="col-md-12">
 			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					 
+				<div class="navbar-header"> 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 					</button> <a class="navbar-brand" href="#">VFMC</a>
-				</div>
+				</div> <!--end of div navbar-header-->
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
@@ -57,16 +56,25 @@
 							Submit
 						</button>
 					</form>
-				</div>
-				
+				</div><!--end of div collapse navbar-collapse-->
 			</nav>
-    </div>
-  </div>
-</div>
-    <h1>{{ data.name[0] }}</h1>
-    <h2>{{ data.about[0] }}</h2>
-    <h1>{{ data.name[1] }}</h1>
-    <h2>{{ data.about[1] }}</h2>
+      </div><!--end of div col-md-12-->
+  </div><!--end of div row-->
+    <div class="row">
+		<div class="col-md-4">
+			<h1>{{ data.name[0] }}</h1>
+            <p>{{ data.about[0] }}</p>
+		</div>
+		<div class="col-md-4">	
+           <h1>{{ data.name[1] }}</h1>
+           <p>{{ data.about[1] }}</p>
+	    </div>
+		<div class="col-md-4">	
+           <h1>{{ data.name[2] }}</h1>
+           <p>{{ data.about[2] }}</p>
+		</div>
+	</div><!--end of div row-->
+  </div><!--end of div container-fluid-->
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
     <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
