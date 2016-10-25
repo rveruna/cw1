@@ -72,50 +72,29 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				Edge of tomorrow
-			</h2>
-			<p>
-				2014
- Action, Adventure, Sci-Fi
-A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.
-Director: Doug Liman
-Stars: Tom Cruise, Emily Blunt, Bill Paxton
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+		<div class="col-md-4 col-md-offset-1">
+			<h1>{{ scifi.name[5] }}</h1>
+			<img class="img-thumbnail" src="{{ url_for('static', filename='img/the-edge-of-tomorrow.jpg')}}"/>
+			<hr>
+			<p>{{ scifi.about[5] }}</p>
+			<h2>Genre: </h2>
+			<p>{{ scifi.genre[5] }}</p>
 		</div>
 		<div class="col-md-4">
-			<h2>
-				Her
-			</h2>
-			<p>
-				2013
- Drama, Romance, Sci-Fi
-A lonely writer develops an unlikely relationship with an operating system designed to meet his every need.
-Director: Spike Jonze
-Stars: Joaquin Phoenix, Amy Adams, Scarlett Johansson
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+			<h1>{{ scifi.name[2] }}</h1>
+			<img class="img-thumbnail" src="{{ url_for('static', filename='img/lucy.jpg')}}"/>
+			<hr>
+			<p>{{ scifi.about[2] }}</p>
+			<h2>Genre: </h2>
+			<p>{{ scifi.genre[2] }}</p>
 		</div>
 		<div class="col-md-4">
-			<h2>
-				Lucy
-			</h2>
-			<p>
-				2014
- Action, Sci-Fi, Thriller 
-A woman, accidentally caught in a dark deal, turns the tables on her captors and transforms into a merciless warrior evolved beyond human logic.
-Director: Luc Besson
-Stars: Scarlett Johansson, Morgan Freeman, Min-sik Choi
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+			<h1>{{ scifi.name[0] }}</h1>
+			<img class="img-thumbnail" src="{{ url_for('static', filename='img/her.jpg')}}"/>
+			<hr>
+			<p>{{ scifi.about[0] }}</p>
+			<h2>Genre: </h2>
+			<p>{{ scifi.genre[0] }}</p>
 		</div>
 	</div>
 	<div class="panel panel-default">
