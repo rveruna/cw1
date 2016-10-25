@@ -19,7 +19,7 @@ def index():
 #route for comedies page
 # loading json
 @app.route('/Comedies')
-def showjson():
+def comedies():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
     data = json.load(open(json_url))
