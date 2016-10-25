@@ -22,8 +22,8 @@ def index():
 def comedies():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
-    data = json.load(open(json_url))
-    return render_template('comedies.html', data=data)
+    comedies = json.load(open(json_url))
+    return render_template('comedies.html', comedies=comedies)
 
 #route for Drama page
 @app.route('/Drama/')
