@@ -8,7 +8,7 @@ def films():
   SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
   json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
   data = json.load(open(json_url))
-  return render_template('films.html', data=data)
+  return render_template('films.html', title='VFMC', data=data)
 
 #route for homepage
 @app.route("/")
@@ -21,7 +21,7 @@ def comedies():
   SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
   json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
   comedies = json.load(open(json_url))
-  return render_template('comedies.html', comedies=comedies)
+  return render_template('comedies.html', title='Comedies', comedies=comedies)
 
 #loading json for drama page
 @app.route('/Drama/')
@@ -29,7 +29,7 @@ def drama():
   SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
   json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
   drama = json.load(open(json_url))
-  return render_template('drama.html', drama=drama)
+  return render_template('drama.html', title='Drama', drama=drama)
 
 #loading json for animation page
 @app.route('/Animation/')
@@ -37,7 +37,7 @@ def animation():
   SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
   json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
   animation = json.load(open(json_url))
-  return render_template('animation.html', animation=animation)
+  return render_template('animation.html', title='Animation', animation=animation)
 
 #loading json for sci-fi page
 @app.route('/Sci-fi/')
@@ -45,7 +45,7 @@ def scifi():
   SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
   json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
   scifi = json.load(open(json_url))
-  return render_template('scifi.html', scifi=scifi)
+  return render_template('scifi.html', title='Sci-fi', scifi=scifi)
 
 #route for personalised error page
 @app.errorhandler (404)
