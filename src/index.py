@@ -5,7 +5,7 @@ app = Flask(__name__)
 # loading json for films page
 
 @app.route('/Films')
-def showjson():
+def films():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
     data = json.load(open(json_url))
@@ -35,8 +35,11 @@ def drama():
 
 #route for animation page
 @app.route('/Animation/')
-def Animation():
-  return render_template('animation.html', title='Animation')
+def animation():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
+    animation = json.load(open(json_url))
+    return render_template('animation.html', animation=animation)
 
 #route for sci-fi page
 @app.route('/Sci-fi/')

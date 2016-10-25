@@ -74,19 +74,12 @@
 	<div class="row">
 		</div>
 		<div class="col-md-4">
-			<h2>
-				Big hero 6
-			</h2>
-			<p>
-				2014
-animation, action, adventure
-The special bond that develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.
-Directors: Don Hall, Chris Williams
-Stars: Ryan Potter, Scott Adsit, Jamie Chung
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+			<h1>{{ animation.name[4] }}</h1>
+			<img class="img-thumbnail" src="{{ url_for('static', filename='img/big-hero-6.jpg')}}"/>
+			<hr>
+			<p>{{ animation.about[4] }}</p>
+			<h2>Genre: </h2>
+			<p>{{ animation.genre[4] }}</p>
 		</div>
 		
 	</div>
