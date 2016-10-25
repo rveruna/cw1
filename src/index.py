@@ -2,6 +2,9 @@ import os
 from flask import Flask, url_for, json, render_template
 app = Flask(__name__)
 
+movies = {
+  comedies:[{title: 'The Family'},{about: 'something something'}]
+}
 # loading json
 @app.route('/Films')
 def showjson():
@@ -19,7 +22,7 @@ def index():
 #route for comedies page
 @app.route('/Comedies/')
 def Comedies():
-  return render_template('comedies.html', title='Comedies')
+  return render_template('genre.html', title='Comedies',eg=movies[comedies])
 
 #route for Drama page
 @app.route('/Drama/')
