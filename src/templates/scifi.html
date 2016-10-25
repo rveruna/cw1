@@ -22,85 +22,85 @@
  </head>
   <body>
     <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					 
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="/">VFMC</a>
-				</div>
-				
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li>
-							<a href="/">Films</a>
-						</li>
-					  <li> 
-              <a href="/Comedies">Comedies</a>
-						</li>
-						<li>
-							<a href="/Drama">Drama</a>
-						</li>
-						<li>
-							<a href="/Animation">Animation</a>
-						</li>
-						<li class="active">
-							<a href="/Sci-fi">Sci-fi</a>
-						</li>
-					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control">
-						</div> 
-						<button type="submit" class="btn btn-default">
-							Submit
-						</button>
-					</form>
-				</div>
-				
-			</nav>
-			<div class="jumbotron">
-				<h2>
-					Veronika's favorite sci-fi!
-				</h2>
-				<p>
-					This is a catalogue of my favourite sci-fi. 
-				</p>
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="navbar-header">
+						
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+						</button> <a class="navbar-brand" href="/">VFMC</a>
+					</div><!--end of div navbar-header-->
+					
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="/">Films</a>
+							</li>
+							<li> 
+								<a href="/Comedies">Comedies</a>
+							</li>
+							<li>
+								<a href="/Drama">Drama</a>
+							</li>
+							<li>
+								<a href="/Animation">Animation</a>
+							</li>
+							<li class="active">
+								<a href="/Sci-fi">Sci-fi</a>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control">
+							</div> 
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+						</form>
+					</div><!--end of div collapse navbar-collapse-->
+					
+				</nav>
+				<div class="jumbotron">
+					<h2>
+						Veronika's favorite sci-fi!
+					</h2>
+					<p>
+						This is a catalogue of my favourite sci-fi. 
+					</p>
+				</div><!--end of div jumbotron-->
+			</div><!--end of div col-md-12-->
+		</div><!--end of div row-->
+		<div class="row">
+			<div class="col-md-4">
+				<h1>{{ scifi.name[5] }}</h1>
+				<img class="img-thumbnail" src="{{ url_for('static', filename='img/the-edge-of-tomorrow.jpg')}}"/>
+				<hr>
+				<p>{{ scifi.about[5] }}</p>
+				<h2>Genre: </h2>
+				<p>{{ scifi.genre[5] }}</p>
 			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-md-offset-1">
-			<h1>{{ scifi.name[5] }}</h1>
-			<img class="img-thumbnail" src="{{ url_for('static', filename='img/the-edge-of-tomorrow.jpg')}}"/>
-			<hr>
-			<p>{{ scifi.about[5] }}</p>
-			<h2>Genre: </h2>
-			<p>{{ scifi.genre[5] }}</p>
-		</div>
-		<div class="col-md-4">
-			<h1>{{ scifi.name[2] }}</h1>
-			<img class="img-thumbnail" src="{{ url_for('static', filename='img/lucy.jpg')}}"/>
-			<hr>
-			<p>{{ scifi.about[2] }}</p>
-			<h2>Genre: </h2>
-			<p>{{ scifi.genre[2] }}</p>
-		</div>
-		<div class="col-md-4">
-			<h1>{{ scifi.name[0] }}</h1>
-			<img class="img-thumbnail" src="{{ url_for('static', filename='img/her.jpg')}}"/>
-			<hr>
-			<p>{{ scifi.about[0] }}</p>
-			<h2>Genre: </h2>
-			<p>{{ scifi.genre[0] }}</p>
-		</div>
-	</div>
-	<div class="panel panel-default">
-      <a href="https://github.com/rveruna/">My GitHub</a>
-   </div><!--end of div panel panel-default-->
-</div>
+			<div class="col-md-4">
+				<h1>{{ scifi.name[2] }}</h1>
+				<img class="img-thumbnail" src="{{ url_for('static', filename='img/lucy.jpg')}}"/>
+				<hr>
+				<p>{{ scifi.about[2] }}</p>
+				<h2>Genre: </h2>
+				<p>{{ scifi.genre[2] }}</p>
+			</div>
+			<div class="col-md-4">
+				<h1>{{ scifi.name[0] }}</h1>
+				<img class="img-thumbnail" src="{{ url_for('static', filename='img/her.jpg')}}"/>
+				<hr>
+				<p>{{ scifi.about[0] }}</p>
+				<h2>Genre: </h2>
+				<p>{{ scifi.genre[0] }}</p>
+			</div>
+		</div><!--end of div row-->
+		<div class="panel panel-default">
+		<a href="https://github.com/rveruna/">My GitHub</a>
+	    </div><!--end of div panel panel-default-->
+	</div><!--end of div container fluid-->
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
     <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
