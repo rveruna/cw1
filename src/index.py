@@ -13,8 +13,7 @@ def films():
 #route for homepage
 @app.route("/")
 def index():
-  films = ['Comedies', 'Drama', 'Animation', 'Sci-fi']
-  return render_template('index.html', title='Home', films=films),200
+  return render_template('index.html', title='Home')
 
 #loading json for comedies page
 @app.route('/Comedies')
