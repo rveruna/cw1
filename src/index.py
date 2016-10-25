@@ -2,7 +2,8 @@ import os
 from flask import Flask, url_for, json, render_template
 app = Flask(__name__)
 
-# loading json
+# loading json for films page
+
 @app.route('/Films')
 def showjson():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
@@ -16,8 +17,7 @@ def index():
   films = ['Comedies', 'Drama', 'Animation', 'Sci-fi']
   return render_template('index.html', title='Home', films=films),200
 
-#route for comedies page
-# loading json
+#loading json for comedies page
 @app.route('/Comedies')
 def comedies():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
@@ -25,10 +25,13 @@ def comedies():
     comedies = json.load(open(json_url))
     return render_template('comedies.html', comedies=comedies)
 
-#route for Drama page
+#loading json for Drama page
 @app.route('/Drama/')
-def Drama():
-  return render_template('drama.html', title='Drama')
+def drama():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/js/", "films.json")
+    drama = json.load(open(json_url))
+    return render_template('drama.html', drama=drama)
 
 #route for animation page
 @app.route('/Animation/')
